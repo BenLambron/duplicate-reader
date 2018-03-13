@@ -1,0 +1,14 @@
+{
+  "name": "duplicate-reader",
+  "version": "1.0.0",
+  "description": "App exporting a function to check if there's duplicate characters in a single string",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Benjamin Lambron",
+  "license": "Beerware",
+  "dependencies": {
+    "bluebird": "^3.5.1"
+  }
+}
