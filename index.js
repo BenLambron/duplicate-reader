@@ -1,25 +1,22 @@
 'use strict';
 
 function getFirstDuplicate(string) {
-    if (typeof string !== 'string') {
-        throw new Error('The string given is not a valid string');
-    }
-    for (let x = 0; x < string.length; x++) {
-        let counter = 0;
-        for (let y = 0; y < string.length; y++) {
-            if (string[x] === string[y]) {
-                counter++;
-            }
-            if (counter >= 2) {
-                return string[x];
-            }
-        }
-    }
-    return null;
+    let regex = "(.|\s|\\).*\1";
 }
 
-console.log('find =>', getFirstDuplicate('find'));
-console.log('abba =>', getFirstDuplicate('abba'));
-console.log('aBba =>', getFirstDuplicate('aBba'));
-console.log('传/傳传/傳 =>', getFirstDuplicate('传/傳传/傳'));
-console.log('шсдфиющэьэкт =>', getFirstDuplicate('шсдфиющэькэт'));
+const strings = [
+    "48ca   p  xq     d8-3b78-47cc-a118-d3c13592ba95",
+    "传傳鑰匙钥匙戲戏飯饭衣裳衣裳",
+    "шс3756дфиющэe9a31ьэк裳衣т",
+    "e357576-9a31-4e61-b421-8599db3693c7",
+    "dc1af076-1499-4dc8-a448-e35810a261e3",
+    "fad60451-af9b-4d3a-9e05-dda2595eb683",
+    "b5b1638c-b6ef-4aef-8d0d-a307e5b59c1a",
+    "9f8d8f6e-6501-4529-89a3-fc78efa2df5c",
+    981374982379827,
+    "1234567890-"
+];
+
+
+
+strings.forEach(string => console.log(string, "=>", getFirstDuplicate(string)));
