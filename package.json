@@ -8,7 +8,5 @@
   },
   "author": "Benjamin Lambron",
   "license": "Beerware",
-  "dependencies": {
-    "bluebird": "^3.5.1"
-  }
+  "dependencies": {}
 }
