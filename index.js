@@ -20,8 +20,8 @@ const start = Date.now();
 for (let i = 0; i < 182; i ++) {
     strings.forEach(string => {
         console.log(duplicate(string));
+        count++
     });
-    count++
 }
 console.log('Elapsed time for', count, 'checks', Date.now() - start, 'ms');
 global.gc();
