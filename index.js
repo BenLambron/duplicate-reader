@@ -20,7 +20,6 @@ const start = Date.now();
 for (let i = 0; i < 182; i ++) {
     strings.forEach(string => {
         console.log(duplicate(string));
-        count++
     });
     count++
 }
