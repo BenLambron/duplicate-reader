@@ -1,11 +1,9 @@
 'use strict';
 
-function getFirstDuplicate(string) {
-    let regex = "(.|\s|\\).*\1";
-}
+const duplicate = require('./firstDuplicate.js');
 
 const strings = [
-    "48ca   p  xq     d8-3b78-47cc-a118-d3c13592ba95",
+    "lkj\t\tud8-3b78-47cc-a118-d3c13592ba95",
     "传傳鑰匙钥匙戲戏飯饭衣裳衣裳",
     "шс3756дфиющэe9a31ьэк裳衣т",
     "e357576-9a31-4e61-b421-8599db3693c7",
@@ -17,6 +15,14 @@ const strings = [
     "1234567890-"
 ];
 
-
-
-strings.forEach(string => console.log(string, "=>", getFirstDuplicate(string)));
+let count = 0;
+const start = Date.now();
+for (let i = 0; i < 182; i ++) {
+    strings.forEach(string => {
+        console.log(duplicate(string));
+        count++
+    });
+    count++
+}
+console.log('Elapsed time for', count, 'checks', Date.now() - start, 'ms');
+global.gc();
