@@ -17,10 +17,10 @@ const strings = [
 
 let count = 0;
 const start = Date.now();
-for (let i = 0; i < 182; i ++) {
-    strings.forEach(string => {
-        console.log(duplicate(string));
-        count++
-    });
-}
+
+strings.forEach(string => {
+    console.log(duplicate(string));
+    count++
+});
+
 console.log('Elapsed time for', count, 'checks', Date.now() - start, 'ms');
