@@ -24,4 +24,3 @@ for (let i = 0; i < 182; i ++) {
     });
 }
 console.log('Elapsed time for', count, 'checks', Date.now() - start, 'ms');
-global.gc();
